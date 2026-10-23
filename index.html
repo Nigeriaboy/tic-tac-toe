@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC-TAC-TOE GAME</title>
+    <!--<link rel="stylesheet" href="./style.css" />-->
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="notification"></div>
+
+    <div id="form-container">
+      <form>
+        <label for="player1">Player 1 Name <span>(x)</span></label>
+        <input type="text" name="player1" id="player1" required />
+        <label for="player2">Player 2 Name <span>(o)</span></label>
+        <input type="text" name="player2" id="player2" required />
+        <input type="submit" id="submit-btn" />
+      </form>
+    </div>
+
+    <h1 id="header">
+      <span style="color: rgb(226, 195, 255)">TIC</span>
+      <span style="color: rgb(226, 43, 180)">TAC</span>
+      <span style="color: rgb(241, 139, 5)">TOE</span>
+    </h1>
+
+    <div id="current-player"></div>
+
+    <div id="container">
+      <div id="gameboard">
+        <p data-index="0" class="box"></p>
+        <p data-index="1" class="box"></p>
+        <p data-index="2" class="box"></p>
+        <p data-index="3" class="box"></p>
+        <p data-index="4" class="box"></p>
+        <p data-index="5" class="box"></p>
+        <p data-index="6" class="box"></p>
+        <p data-index="7" class="box"></p>
+        <p data-index="8" class="box"></p>
+      </div>
+    </div>
+
+    <div id="restart-btn-container">
+      <div id="restart-btn">Restart</div>
+    </div>
+
+    <!--<script type="module" src="index.js"></script>-->
+  </body>
+</html>
