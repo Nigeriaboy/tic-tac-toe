@@ -1,0 +1,147 @@
+body {
+  background-color: rgb(18, 36, 1);
+  text-align: center;
+  font-family: cursive;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#header {
+  text-align: center;
+  font-size: clamp(30px, 5vw, 40px);
+}
+
+#current-player {
+  font-size: clamp(15px, 2vw, 25px);
+  color: white;
+  margin-bottom: 20px;
+}
+#container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+}
+#gameboard {
+  border: solid 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: clamp(300px, 50vw, 500px);
+  height: clamp(300px, 50vw, 500px);
+  gap: 0px;
+  border: solid 1px chartreuse;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  border: solid 1px chartreuse;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(179, 255, 0);
+  font-size: 50px;
+}
+
+.box:hover {
+  cursor: pointer;
+  border: rgb(179, 255, 0);
+}
+
+#gameboard > .box > span {
+  position: absolute;
+  place-items: center;
+}
+
+#form-container {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(18, 36, 1);
+  z-index: 90;
+  position: fixed;
+  inset: 0;
+}
+
+form {
+  border: solid chartreuse;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(50px, 50%, 500px);
+  height: clamp(50px, 50%, 300px);
+  background-color: rgb(19, 36, 4);
+}
+
+form > input {
+  height: 35px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: solid chartreuse;
+  background-color: rgba(0, 0, 0, 0);
+  color: chartreuse;
+  outline: none;
+  font-size: 15px;
+}
+
+form > label {
+  margin-bottom: 7px;
+  color: chartreuse;
+}
+
+form > label[for="player2"] {
+  margin-top: 15px;
+}
+
+form > label > span {
+  color: red;
+  font-size: 25px;
+}
+
+form > #submit-btn, #restart-btn {
+  margin-top: 20px;
+  width: 30%;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: chartreuse;
+  color: black;
+  border: none;
+}
+
+form > #submit-btn:hover, #restart-btn:hover {
+  cursor: pointer;
+  background-color: rgba(127, 255, 0, 0.9);
+}
+
+/** notification**/
+
+#notification {
+  z-index: 100;
+  background-color: rgba(127, 255, 0, 0.9);
+  width: fit-content;
+  justify-self: center;
+  padding: 5px 15px;
+  margin-top: 10px;
+  display: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+#restart-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#restart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
